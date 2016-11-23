@@ -6,7 +6,7 @@ Accounts software for UCET
 
 $$ UCET_Accountsv2.0.jar
 
-1. Connect to internet;
+1. Connect to internet.
 2. Download the jar file.
 3. Run it.
 4. Login credentials : username = 'alpha'

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.MainScreenController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exitbuttonhandler" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu fx:id="aboutbutton" mnemonicParsing="false" onAction="#aboutbuttonhandler" text="About" />
+                <Menu fx:id="help" mnemonicParsing="false" onAction="#helpbuttonhandler">
+                     <graphic>
+                        <Hyperlink text="Help@Website" />
+                     </graphic></Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="613.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#dbshandler" prefHeight="180.0" prefWidth="235.0" text="Defaulters by Session" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1493590696_39_Calendar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="alltransactions" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#alltransactionshandler" prefHeight="180.0" prefWidth="235.0" text="All Transactions" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tr.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="lfpbutton" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#lfpbtnhandler" prefHeight="180.0" prefWidth="235.0" text="Last 15 payments" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1493591156_Indian_Rupee_symbol.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="sendmailbutton" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sendmailtodef" prefHeight="180.0" prefWidth="235.0" text="Send Mail" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1493590963_aiga_mail_inver.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="studinfobutton" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#studhandler" prefHeight="180.0" prefWidth="235.0" text="Student Info Records" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1493590706_group_full.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Admission">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutY="2.0" prefHeight="214.0" prefWidth="804.0" style="-fx-background-color: #e7e7e7;" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <children>
+                                    <VBox prefHeight="214.0" prefWidth="626.0">
+                                       <children>
+                                          <JFXTextField fx:id="nm" labelFloat="true" prefHeight="36.0" prefWidth="577.0" promptText="name">
+                                             <VBox.margin>
+                                                <Insets bottom="17.0" left="12.0" right="12.0" top="21.0" />
+                                             </VBox.margin></JFXTextField>
+                                          <JFXTextField fx:id="fnm" labelFloat="true" layoutX="15.0" layoutY="15.0" prefHeight="36.0" prefWidth="577.0" promptText="father's name">
+                                             <VBox.margin>
+                                                <Insets bottom="17.0" left="12.0" right="12.0" top="15.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="mnm" labelFloat="true" layoutX="10.0" layoutY="56.0" prefHeight="36.0" prefWidth="577.0" promptText="mother's name">
+                                             <VBox.margin>
+                                                <Insets bottom="17.0" left="12.0" right="12.0" top="15.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="214.0" prefWidth="243.0">
+                                       <children>
+                                          <JFXDatePicker fx:id="dob" overLay="true" prefHeight="48.0" prefWidth="186.0" promptText="Date of Birth">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="5.0" top="3.0" />
+                                             </VBox.margin>
+                                          </JFXDatePicker>
+                                          <Button fx:id="uploadimage" mnemonicParsing="false" onAction="#uploadimagehandler" style="-fx-background-color: black;" text="Upload Photo" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="50.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <ImageView fx:id="photopreview" fitHeight="68.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets left="68.0" top="3.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <JFXRadioButton fx:id="genrb" text="GEN">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="3.0" />
+                                                         </VBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="categ" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton fx:id="scrb" text="SC" toggleGroup="$categ">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="7.0" />
+                                                         </VBox.margin>
+                                                      </JFXRadioButton>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <JFXRadioButton fx:id="strb" text="ST" toggleGroup="$categ">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="3.0" />
+                                                         </VBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton fx:id="obcrb" text="OBC" toggleGroup="$categ">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="7.0" />
+                                                         </VBox.margin>
+                                                      </JFXRadioButton>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin></VBox>
+                                 </children></HBox>
+                              <HBox layoutX="2.0" layoutY="222.0" prefHeight="150.0" prefWidth="804.0" style="-fx-background-color: #e7e7e7;">
+                                 <children>
+                                    <VBox prefHeight="150.0" prefWidth="584.0">
+                                       <children>
+                                          <JFXTextField fx:id="rn" labelFloat="true" prefHeight="30.0" promptText="Roll number">
+                                             <VBox.margin>
+                                                <Insets bottom="17.0" left="12.0" right="12.0" top="18.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="br" labelFloat="true" layoutX="22.0" layoutY="17.0" prefHeight="30.0" promptText="Branch">
+                                             <VBox.margin>
+                                                <Insets bottom="17.0" left="12.0" right="12.0" top="8.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXTextField fx:id="ss" labelFloat="true" promptText="Session Start">
+                                                   <HBox.margin>
+                                                      <Insets bottom="17.0" left="12.0" right="12.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="se" labelFloat="true" promptText="Session End">
+                                                   <HBox.margin>
+                                                      <Insets right="12.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="215.0">
+                                       <children>
+                                          <JFXRadioButton fx:id="grb" text="GEN">
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="feecateg" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="tfwrb" text="TFW" toggleGroup="$feecateg">
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                       </children></VBox>
+                                 </children></HBox>
+                              <Button fx:id="submitbtn" layoutX="327.0" layoutY="533.0" mnemonicParsing="false" onAction="#submitbtnhandler" prefHeight="41.0" prefWidth="150.0" text="Submit">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@1493598289_paper-plane_64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <VBox layoutX="2.0" layoutY="378.0" prefHeight="149.0" prefWidth="802.0" style="-fx-background-color: #e7e7e7;">
+                                 <children>
+                                    <JFXTextField fx:id="add" labelFloat="true" promptText="Address">
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="12.0" top="12.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="em" labelFloat="true" promptText="email">
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="12.0" top="12.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="mn" labelFloat="true" promptText="Mobile number">
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="12.0" top="12.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="fmn" labelFloat="true" promptText="Father's mobile number">
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="12.0" top="12.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Fee Payment">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="Vroll" labelFloat="true" layoutX="491.0" layoutY="30.0" onAction="#LoadFeeInfo" prefHeight="24.0" prefWidth="284.0" promptText="Roll Number">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="Vname" labelFloat="true" layoutX="29.0" layoutY="30.0" prefHeight="24.0" prefWidth="404.0" promptText="Name">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="Vfname" labelFloat="true" layoutX="29.0" layoutY="80.0" prefHeight="24.0" prefWidth="404.0" promptText="Father's Name">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="Vbranch" labelFloat="true" layoutX="29.0" layoutY="127.0" prefHeight="24.0" prefWidth="404.0" promptText="Branch">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="Vsession" labelFloat="true" layoutX="29.0" layoutY="176.0" prefHeight="24.0" prefWidth="404.0" promptText="Session">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="Vcategory" labelFloat="true" layoutX="29.0" layoutY="226.0" prefHeight="24.0" prefWidth="404.0" promptText="Category">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fx:id="prophoto" fitHeight="169.0" fitWidth="200.0" layoutX="533.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+                              <VBox layoutX="29.0" layoutY="263.0" prefHeight="308.0" prefWidth="405.0" style="-fx-background-color: #E7E7E7;">
+                                 <children>
+                                    <JFXTextField fx:id="ChallanNo" labelFloat="true" promptText="CHALLAN NUMBER">
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="27.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="ChallanAmount" labelFloat="true" promptText="CHALLAN AMOUNT">
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="27.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXDatePicker fx:id="ChallanDate" overLay="true" prefHeight="46.0" prefWidth="193.0" promptText="CHALLAN DATE">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="100.0" right="20.0" top="8.0" />
+                                       </VBox.margin>
+                                    </JFXDatePicker>
+                                    <JFXButton buttonType="RAISED" onAction="#PayFeeHandler" prefHeight="57.0" prefWidth="104.0" ripplerFill="#10b90d" style="-fx-background-color: black;" text="Submit" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="140.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <JFXTextField fx:id="FeePaid" labelFloat="true" layoutX="472.0" layoutY="278.0" prefHeight="38.0" prefWidth="321.0" promptText="Fee paid">
+                                 <padding>
+                                    <Insets bottom="30.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="FeepaidUpto" labelFloat="true" layoutX="471.0" layoutY="348.0" prefHeight="38.0" prefWidth="321.0" promptText="Fee paid upto">
+                                 <padding>
+                                    <Insets bottom="30.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="TotalAmountPayable" labelFloat="true" layoutX="472.0" layoutY="409.0" prefHeight="38.0" prefWidth="321.0" promptText="Total  amount payable">
+                                 <padding>
+                                    <Insets bottom="30.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="FeeCategory" labelFloat="true" layoutX="472.0" layoutY="474.0" prefHeight="38.0" prefWidth="321.0" promptText="Fee category">
+                                 <padding>
+                                    <Insets bottom="30.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

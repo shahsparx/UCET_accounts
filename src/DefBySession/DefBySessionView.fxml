@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="821.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DefBySession.DefBySessionViewController">
+    <stylesheets>
+        <URL value="@defbysessionview.css" />
+      <URL value="@../../../../Desktop/ShahCreates/FunCV/tabe.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableView" layoutX="-12.0" prefHeight="583.0" prefWidth="821.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="rollcol" prefWidth="75.0" text="Roll Number" />
+          <TableColumn fx:id="namecol" prefWidth="97.0" text="Name" />
+            <TableColumn fx:id="branchcol" prefWidth="137.0" text="Branch" />
+            <TableColumn fx:id="feecatcol" prefWidth="75.0" text="Fee Category" />
+            <TableColumn fx:id="sessioncol" prefWidth="75.0" text="Session start" />
+            <TableColumn fx:id="amountpaidcol" prefWidth="75.0" text="Amount Paid" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="UCET_ACCOUNTS.jnlp">
+  <information>
+    <title>UCET_ACCOUNTS</title>
+    <vendor>shahsparx</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="UCET_ACCOUNTS.jar" size="120391" download="eager" />
+    <jar href="lib/controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib/fxsampler-1.0.9.jar" size="30952" download="eager" />
+    <jar href="lib/javax.mail.jar" size="608084" download="eager" />
+    <jar href="lib/jfoenix.jar" size="2359643" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.38-bin.jar" size="983914" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="UCET_ACCOUNTS" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="ucet_accounts.UCET_ACCOUNTS"  name="UCET_ACCOUNTS" />
+  <update check="always"/>
+</jnlp>

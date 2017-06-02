@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="1022.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentRecords.StudRecController">
+    <stylesheets>
+        <URL value="@studrec.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tv" layoutX="-181.0" prefHeight="1022.0" prefWidth="1260.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="roll" prefWidth="75.0" text="roll" />
+          <TableColumn fx:id="name" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="sessionfrom" prefWidth="75.0" text="session from" />
+            <TableColumn fx:id="sessionto" prefWidth="75.0" text="session to" />
+            <TableColumn fx:id="branch" prefWidth="75.0" text="branch" />
+            <TableColumn fx:id="feeateg" prefWidth="75.0" text="fee category" />
+            <TableColumn fx:id="father" prefWidth="75.0" text="father" />
+            <TableColumn fx:id="mother" prefWidth="75.0" text="mother" />
+            <TableColumn fx:id="category" prefWidth="75.0" text="category" />
+            <TableColumn fx:id="mobile" prefWidth="75.0" text="mobile" />
+            <TableColumn fx:id="address" prefWidth="75.0" text="address" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="email" />
+            <TableColumn fx:id="fathersmobile" prefWidth="75.0" text="fathers mobile" />
+            <TableColumn fx:id="dob" prefWidth="75.0" text="dob" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
